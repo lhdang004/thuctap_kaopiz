@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang sinh viên</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Ẩn radio */
+        input[name="tab"] {
+            display: none;
+        }
+
+        /* Bố cục */
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar label {
+            display: block;
+            padding: 18px 25px;
+            cursor: pointer;
+            border-left: 5px solid transparent;
+        }
+
+        .sidebar label:hover {
+            background: #f5f5f5;
+        }
+
+        /* Đánh dấu mục đang chọn */
+        #tab1:checked ~ .layout label[for="tab1"],
+        #tab2:checked ~ .layout label[for="tab2"],
+        #tab3:checked ~ .layout label[for="tab3"] {
+            background: #f1f3f7;
+            border-left-color: orangered;
+            font-weight: bold;
+        }
+
+        /* Nội dung bên phải */
+        .content {
+            flex: 1;
+            padding: 25px;
+            min-width: 0;
+        }
+
+        .page {
+            display: none;
+        }
+
+        #tab1:checked ~ .layout .page1,
+        #tab2:checked ~ .layout .page2,
+        #tab3:checked ~ .layout .page3 {
+            display: block;
+        }
+
+        h2 {
+            color: orangered;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f5f7fa;
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 145px;
+            }
+
+            .sidebar label {
+                padding: 14px 8px;
+                font-size: 13px;
+            }
+
+            .content {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Trạng thái lựa chọn -->
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <label for="tab1">ĐIỂM HỌC TẬP</label>
+            <label for="tab2">ĐIỂM RÈN LUYỆN</label>
+            <label for="tab3">ĐIỂM DANH CHUYÊN CẦN</label>
+        </aside>
+
+        <main class="content">
+
+            <section class="page page1">
+                <h2>ĐIỂM HỌC TẬP</h2>
+                <p>Điểm trung bình học tập: 3.2</p>
+
+                <table>
+                    <tr>
+                        <th>Môn học</th>
+                        <th>Điểm</th>
+                    </tr>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr>
+                        <td>Cơ sở dữ liệu</td>
+                        <td>7.5</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="page page2">
+                <h2>ĐIỂM RÈN LUYỆN</h2>
+                <p>Điểm rèn luyện học kỳ: 85</p>
+                <p>Xếp loại: Tốt</p>
+            </section>
+
+            <section class="page page3">
+                <h2>ĐIỂM DANH CHUYÊN CẦN</h2>
+                <table>
+                    <tr>
+                        <th>Môn học</th>
+                        <th>Số buổi đã dạy</th>
+                        <th>Số buổi đi học</th>
+                    </tr>
+                    <tr>
+                        <td>Kỹ thuật số</td>
+                        <td>15</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>Giải tích</td>
+                        <td>15</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
