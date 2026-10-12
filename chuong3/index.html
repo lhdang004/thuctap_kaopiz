@@ -3,51 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
 </head>
 <body>
-    <div class="full">
-        <div class="page">
+    <div id="full">
+        <div id="page">
             <div id="header">
-                <h1>Header</h1>
+                <h1>My Website</h1>
             </div>
-            <div id="nav">
-               
-                    <div class="nav-bar">
-                    <a href="#"><li>nav1</li></a>
-                    <a href="#"><li>nav2</li></a>
-                    <a href="#"><li>nav3</li></a>
-                    <a href="#"><li>nav4</li></a>
+            <div id="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div id="main">
+                <div class="slidebar">
+                    <a href="#">Sidebar 1</a><br>
+                    <a href="#">Sidebar 2</a><br>
+                    <a href="#">Sidebar 3</a>
+                </div>
+
+                <div class="content">
+                    <div class="post">
+                        <img src="img/images.jpg"
+                             alt="Image describing the HTML page structure">
                     </div>
-                    <div class="sign">
-                    <a href="#"><li>Sign In</li></a>
-                    <a href="#"><li>Sign Up</li></a>
+
+                    <div class="post">
+                        <p>Lorem ipsum dolor sit amet</p>
                     </div>
-                
+
+                    <div class="post">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Header 1</th>
+                                    <th>Header 2</th>
+                                    <th>Header 3</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Content 1</td>
+                                    <td>Content 2</td>
+                                    <td>Content 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Data 1</td>
+                                    <td>Data 2</td>
+                                    <td>Data 3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="post">
+                        <label for="input1">Input 1:</label>
+                        <input type="text" id="input1"
+                               class="input1" placeholder="Enter input 1">
+
+                        <label for="input2">Input 2:</label>
+                        <input type="text" id="input2"
+                               class="input2" placeholder="Enter input 2">
+                    </div>
+                </div>
             </div>
-            <div id="container">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="slidebar"><ul>
-                                <a href="#"><li>Slidebar 1</li></a>
-                                <a href="#"><li>Slidebar 2</li></a>
-                                <a href="#"><li>Slidebar 3</li></a>
-                                <a href="#"><li>Slidebar 4</li></a>
-                                <a href="#"><li>Slidebar 5</li></a>
-                            </ul></div>
-                        </td>
-                        <td>
-                            <div class="post">
-                                <img src="D:\thuctap_kaopiz\chuong3\img\images.jpg" alt="Image 1" >
-                            </div>
-                            <div class="post">Content 2</div>
-                            <div class="post">Content 3</div>
-                        </td>
-                    </tr>
-                </table>
+
+            <div id="footer">
+                <p>Copyright © 2024 My Website. All rights reserved.</p>
             </div>
-            <div id="footer">Footer Content</div>
+
         </div>
     </div>
 </body>
