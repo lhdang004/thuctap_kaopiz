@@ -90,7 +90,47 @@
 }
 
 :root{
-   --text-size:30;
-   --main-color:blue;
+    --color-primary: #303392;
+  --color-bg: #ffffff;
+  --color-text: #1f2160;
+  --radius: 12px;
+  --space: 1rem;
 }
 
+.btn {
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 0.5) var(--space);
+}
+.btn.danger{
+     --color-primary: #23b33d;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
+
+.btn:active{
+    background-color: red;
+}
+
+@media( prefers-color-scheme: dark){
+    :root {--color-bg: #14153d; --color-text: #eef0fb; }
+}
+body{
+    background: var(--color-bg);color :var(--color-text)
+}
+
+/* Mặc định: điện thoại, 1 cột */
+.courses { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+
+/* Tablet trở lên */
+@media (min-width: 768px) {
+  .courses { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Laptop trở lên */
+@media (min-width: 1024px) {
+  .courses { grid-template-columns: repeat(3, 1fr); }
+  .page { grid-template-columns: 240px 1fr; }
+}
