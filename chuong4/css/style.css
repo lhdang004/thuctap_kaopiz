@@ -23,7 +23,21 @@
       color: white;
 }
 
-.post {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.post1 {
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.post1:hover {
+   transform: translateY(-4px) scale(1.02);
+   box-shadow: 0 12px 30px rgb(48 51 146 / 0.2);
+   background-color:blue ;
+}
 
+@keyframes float {
+   0%, 100% { transform: translateY(0); }
+   50%      { transform: translateY(-10px); }
+}
+.badge { animation: float 3s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .badge { animation: none; }
 }
