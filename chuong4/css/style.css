@@ -28,16 +28,48 @@
 }
 .post1:hover {
    transform: translateY(-4px) scale(1.02);
-   box-shadow: 0 12px 30px rgb(48 51 146 / 0.2);
-   background-color:blue ;
+   background-color:rgb(8, 157, 250) ;
 }
 
-@keyframes float {
-   0%, 100% { transform: translateY(0); }
-   50%      { transform: translateY(-10px); }
-}
-.badge { animation: float 3s ease-in-out infinite; }
+.badge {
+            display: inline-block;
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
 
-@media (prefers-reduced-motion: reduce) {
-  .badge { animation: none; }
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-90px);
+            }
+        }
+
+#navbar { 
+     display: flex;
+        justify-content: center;
+        aligin-items: center;
+        gap: 10px;
+
 }
+
+.post5 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            width: 250px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+.post5 {
+            background: #303392;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
