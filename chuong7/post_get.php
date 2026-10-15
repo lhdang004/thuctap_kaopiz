@@ -16,7 +16,7 @@
         <input type="submit" value="Log in"><br>
     </form> -->
 
-    <form action="index.php" method="post">
+    <form action="post_get.php" method="post">
         <label for="">quantity</label><br>
         <input type="number" name="quantity"><br>
         <label for="">foot</label><br>
@@ -44,7 +44,6 @@ $total = $quantity * $price;
 
 echo "You have order {$quantity} x {$food}<br>";
 echo "Price : {$total} <br>";
-
 
 
 

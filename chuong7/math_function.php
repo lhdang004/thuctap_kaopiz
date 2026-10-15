@@ -68,8 +68,10 @@
         <h1>Bai tap : nguoi dung nhap ban kinh , tinh chu vu va the tich</h1>
         <label for="">Nhập bán kính</label>
         <input type="number" name="r">
-        <input type="submit">
+        <input type="submit"><br>
+
     </form>
+    <a href="post_get.php" target="_blank">post</a><br>
 </body>
 
 </html>
