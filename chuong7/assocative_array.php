@@ -11,10 +11,10 @@
     <form action="assocative_array.php" method="post">
         <label for="">Your capital</label>
         <select name="country" id="country">
-            <option value="USA">USA</option>
-            <option value="Japan">Japan</option>
-            <option value="China">China</option>
-            <option value="Korea">Korea</option>
+            <option name="USA">USA</option>
+            <option name="Japan">Japan</option>
+            <option name="China">China</option>
+            <option name="Korea">Korea</option>
         </select>
         <input type="submit" name="" id="">
     </form>
@@ -24,6 +24,9 @@
 
 
 <?php //mang ket hop
+$ten = "dang";
+$ho = "LE hai";
+echo "{$ten} ";
 $capitals = array("USA" => "Wasington D.C",
                 "Japan" => "Tokyo", 
                 "China" => "BacKinh", 
@@ -57,5 +60,13 @@ $capital = $capitals[$_POST["country"]];
 //     //     echo("{$value} <br>"); 
         
 //     //     };
+
+?>
+
+
+<?php
+$ten = "dang";
+echo "le hai" . "{$ten}" ;
+
 
 ?>
