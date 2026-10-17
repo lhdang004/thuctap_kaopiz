@@ -11,11 +11,11 @@ $phone = "123-456-789";
 // $username = strrev( $username ); //dao nguoc
 // $username = str_shuffle($username); // xao tron ngau nhien chu
 //$so_sanh = strcmp( $username, "Homie Code" ); // so sanh 2 chuoi , giog nhau tra ve 0 , khac nhau tra ve 1 / -1
-$dem = strlen($phone);
+//$dem = strlen($phone); // dem so luong  
 
 
 echo $username ."<br>";
 echo $phone ."<br>";
-echo $dem;
+
 
 ?>
