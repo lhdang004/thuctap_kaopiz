@@ -33,8 +33,8 @@ session_start();
 if(isset($_POST["logout"])){
     //session_destroy();
 
-    $_SESSION["username"] = null;
-    $_SESSION["password"] = null;
+    // $_SESSION["username"] = null;
+    // $_SESSION["password"] = null;
 
     header("Location: index.php");
 }
