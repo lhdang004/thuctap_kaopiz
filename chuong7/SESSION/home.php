@@ -31,7 +31,7 @@ session_start();
     echo $_SESSION["password"] ."<br>";
 
 if(isset($_POST["logout"])){
-    //session_destroy();
+    session_destroy();
 
     // $_SESSION["username"] = null;
     // $_SESSION["password"] = null;
