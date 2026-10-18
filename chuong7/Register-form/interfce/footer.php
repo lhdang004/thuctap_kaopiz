@@ -1,0 +1,1 @@
+ <footer>&copy; <?= date('Y') ?> Website của tôi</footer>
