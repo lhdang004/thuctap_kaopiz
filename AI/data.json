@@ -1,0 +1,140 @@
+{
+  "create_order_request": {
+    "items": [
+      {
+        "product_id": 101,
+        "quantity": 2
+      },
+      {
+        "product_id": 205,
+        "quantity": 1
+      }
+    ],
+    "shipping_address": {
+      "recipient_name": "Nguyen Van A",
+      "phone": "0912345678",
+      "province": "Ha Noi",
+      "district": "Ha Dong",
+      "ward": "Van Phuc",
+      "address_detail": "So 10, ngo 20"
+    },
+    "payment_method": "cod",
+    "note": "Giao hang gio hanh chinh"
+  },
+  "create_order_response_201": {
+    "success": true,
+    "message": "Dat hang thanh cong",
+    "data": {
+      "order_id": 5001,
+      "order_code": "ORD-20261026-5001",
+      "status": "pending",
+      "payment_method": "cod",
+      "subtotal": 150000,
+      "shipping_fee": 20000,
+      "discount_amount": 0,
+      "total_amount": 170000,
+      "items": [
+        {
+          "product_id": 101,
+          "product_name": "Cam Cao Phong",
+          "quantity": 2,
+          "unit_price": 65000,
+          "line_total": 130000
+        },
+        {
+          "product_id": 205,
+          "product_name": "Rau sach",
+          "quantity": 1,
+          "unit_price": 20000,
+          "line_total": 20000
+        }
+      ],
+      "shipping_address": {
+        "recipient_name": "Nguyen Van A",
+        "phone": "0912345678",
+        "province": "Ha Noi",
+        "district": "Ha Dong",
+        "ward": "Van Phuc",
+        "address_detail": "So 10, ngo 20"
+      },
+      "created_at": "2026-10-26T10:00:00+07:00"
+    }
+  },
+  "get_order_response_200": {
+    "success": true,
+    "message": "Lay don hang thanh cong",
+    "data": {
+      "order_id": 5001,
+      "order_code": "ORD-20261026-5001",
+      "status": "pending",
+      "payment_method": "cod",
+      "payment_status": "unpaid",
+      "subtotal": 150000,
+      "shipping_fee": 20000,
+      "discount_amount": 0,
+      "total_amount": 170000,
+      "items": [
+        {
+          "product_id": 101,
+          "product_name": "Cam Cao Phong",
+          "quantity": 2,
+          "unit_price": 65000,
+          "line_total": 130000
+        }
+      ],
+      "shipping_address": {
+        "recipient_name": "Nguyen Van A",
+        "phone": "0912345678",
+        "province": "Ha Noi",
+        "district": "Ha Dong",
+        "ward": "Van Phuc",
+        "address_detail": "So 10, ngo 20"
+      },
+      "created_at": "2026-10-26T10:00:00+07:00",
+      "updated_at": "2026-10-26T10:00:00+07:00"
+    }
+  },
+  "cancel_order_response_200": {
+    "success": true,
+    "message": "Huy don hang thanh cong",
+    "data": {
+      "order_id": 5001,
+      "status": "cancelled",
+      "cancelled_at": "2026-10-26T10:05:00+07:00"
+    }
+  },
+  "validation_error_response_422": {
+    "success": false,
+    "message": "Du lieu khong hop le",
+    "errors": {
+      "items.0.quantity": [
+        "So luong phai lon hon hoac bang 1"
+      ],
+      "shipping_address.phone": [
+        "So dien thoai khong hop le"
+      ]
+    }
+  },
+  "stock_conflict_response_409": {
+    "success": false,
+    "message": "Khong du hang trong kho",
+    "errors": {
+      "items.0.product_id": [
+        "San pham khong du so luong yeu cau"
+      ]
+    }
+  },
+  "unauthenticated_response_401": {
+    "success": false,
+    "message": "Unauthenticated"
+  },
+  "idempotency_in_progress_response_409": {
+    "success": false,
+    "message": "Idempotency key conflict",
+    "errors": {
+      "code": [
+        "idempotency_request_in_progress"
+      ]
+    }
+  }
+}

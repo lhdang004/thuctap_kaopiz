@@ -1,10 +1,17 @@
 <?php
+
+session_start();
+if (isset($_SESSION["name"])) {
+    echo "Xin chào, " . ($_SESSION["name"]);
+}
 if (isset($_POST["logout"])) {
     
     header("Location: login.php");
 
-}
+    session_destroy();
+    session_unset();
 
+}
 
 ?>
 
@@ -16,7 +23,7 @@ if (isset($_POST["logout"])) {
     </form>
     <br><br>
 
-    <h1>Xin Chao {$name}</h1>
+
 
     <nav>
         <a href="home.php">home</a>
