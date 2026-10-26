@@ -1,5 +1,7 @@
 <?php
 include("../database.php");
+ 
+session_start();
 
 ?>
 
@@ -42,6 +44,7 @@ if(isset($_POST["submit"])){
 
         while ($row = mysqli_fetch_assoc($result)) {
         if($row["username"] == $username && password_verify($password , $row["password"]))    {
+            $_SESSION["name"] = $row["username"];
             header("Location: home.php");
             $check = true;
         }
